@@ -1,0 +1,734 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 10px;
+
+    /* Text Color */
+    --main-color: #f3f3f3;
+    --Secondory-color: #ff3343;
+
+    /* Background Color */
+    --main-bg-color: #111111;
+    --button-bg-color: #c91b28;
+    --card-bg-color: #1e1e1e;
+}
+
+body{
+    font-family: "Poppns", sans-serif;
+    color: var(--main-color);
+    background-color: var(--main-bg-color);
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+img{
+    width: 8px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 4.8rem 6.4rem 0 1.6rem;
+}
+
+/* Navbar */
+.navbar img{
+    width: 12rem;
+}
+
+#item, #active-item, .navbar img{
+    cursor: pointer;
+}
+
+.navbar nav{
+    width: 50%;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+#active-item:after{ 
+    position: relative;
+    bottom: .4rem;
+    font-size: 2rem;
+    content: '\f0dd';
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    margin:0 0 0 1rem;
+    text-decoration:none;
+}
+
+.bar{
+    display: none;
+}
+
+/* Intro Section */
+.intro{
+    /* display: grid; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 6.5rem;
+}
+
+.intro img{
+    flex: 1 0;
+}
+
+.intro .info{
+    flex: 1 0;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info h3{
+    color: var(--Secondory-color);
+    font-size: 2rem;
+}
+
+.info h2{
+    font-size: 5rem;
+}
+
+.info p{
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+}
+
+.info button{
+    font-size: 17px;
+    background-color: var(--button-bg-color);
+    border: navajowhite;
+    height: 40px;
+    width: 135px;
+    color: var(--main-color);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.info button:hover{
+    cursor: pointer;
+}
+
+/* Busness section */
+.business{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    margin: 0;
+    background: linear-gradient(to right,
+                                #181818, 
+                                #181818 50%, 
+                                #111111 50%);
+}
+
+.skills{
+    margin: 0 auto;
+    display: flex;
+    gap: 28px;
+}
+
+.skills .skill{
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 4rem 4rem 4rem 6rem;
+    background-color: var(--card-bg-color);
+
+    /* margin: 0 auto;
+    width: 30rem;
+    padding-left: 60px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    /* padding-right: 40px; */
+    
+}
+
+.skill:nth-child(2) button{
+    color: #F3F3F3;
+}
+/* 
+.skills{
+        
+}
+*/
+.skill:nth-child(2){
+    background-color: var(--button-bg-color);
+    color: #F3F3F3;
+}
+
+.skill img{
+    width: 20%;
+}
+
+.skill:nth-child(2) img{
+    width: 15%;
+}
+.skill h2{
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.skill p{
+    width: 95%;
+    font-size: 1.6rem;
+}
+
+.skill button{
+    background: no-repeat;
+    color: var(--Secondory-color);
+    border: navajowhite;
+    font-weight: bold;
+    font-size: 1.6rem;
+    align-self: flex-start;
+    text-transform: uppercase;
+}
+
+.skill button:after{ 
+    font-size: 1.5rem;
+    color: var(--Secondory-color);
+    content: '\f061';
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0 0 0 1.5rem;
+    text-decoration: none;
+    align-self: center;
+}
+
+.skill:nth-child(2) button::after{
+    content: '\f061';
+    color: var(--main-color);
+
+}
+
+/* Acheivement Section */
+.acheivements-section{
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Acheivements */
+.acheivement{
+    background-color: #181818;
+    width: 30rem;
+    /* min-height: 100px; */
+    font-size: 3rem;
+    color: var(--main-color);
+    text-align: center;
+    padding: 8rem 0;
+}
+
+.acheivement h2{
+    color: var(--button-bg-color);
+    font-weight: bold;
+    font-size: 7rem;
+}
+
+.acheivement p{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.acheivements-section .right-side{
+    width: 63rem;
+    display: flex;
+    flex-direction: row;
+    flex: 30rem 30rem;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.right-side .acheive{
+    width: 30rem;
+    background-color: var(--card-bg-color);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.right-side .acheive h2{
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--Secondory-color);
+}
+
+.right-side .acheive P{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Projects */
+.projects{
+    margin: 10rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.projects .heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 2rem;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.projects .heading h2{
+    font-size: 2rem;
+    line-height: 4rem;
+    text-transform: uppercase;
+}
+
+.projects .heading p{
+    font-size: 1.6rem;
+    opacity: .6;
+}
+
+.projects button{
+    border: none;
+    background-color: var(--button-bg-color);
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 5rem;
+    width: 15rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+.project-section{
+    width: 70%;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: repeat(2, 25%); */
+    justify-content: center;
+    row-gap: 5rem;
+    column-gap: 5rem;
+}
+
+.project{
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.project img{
+    width: 100%;
+    padding: 6rem 4rem;
+    background-color: var(--card-bg-color);
+    border-radius: 5px;
+}
+
+.project:nth-child(4) img{
+    padding: 8rem 4rem;
+}
+
+.project h2{
+    text-align: left;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.project button{
+    text-align: left;
+    background-color: var(--main-bg-color);
+    color: var(--button-bg-color);
+    padding: 0;
+    font-size: 1.8rem;
+    height: 0;
+}
+
+
+.project button:after{ 
+    font-size: 1.5rem;
+    color: var(--Secondory-color);
+    content: '\f061';
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0 0 0 1.5rem;
+    text-decoration: none;
+    align-self: center;
+}
+
+
+/* Collab section */
+.collab{
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--card-bg-color);
+    padding: 7rem 5rem;
+}
+
+.text{
+    width: 60%  ;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.collab h2{
+    font-size: 3rem;
+    color: var(--main-color);
+}
+
+.collab p{
+    font-size: 1.8rem;
+    color: var(--main-color);
+    opacity: .6;
+    line-height: 24px;
+}
+
+.collab button{
+    width: 13rem;
+    height: 4.2rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    align-self: center;
+    border: none;
+    color: var(--main-color);
+    /* outline: navajowhite; */
+    background-color: var(--button-bg-color);
+    border: none;
+}
+
+
+.bottom-nav{
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    width: 42%;
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+/* Footer Section */
+footer{
+    width: 100%;
+    background-color: var(--card-bg-color);
+}
+
+.wrap{
+    margin-left: 17rem;
+    padding: 3rem 0;
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+
+.wrap>img{
+    width: 11rem;
+}
+
+.wrap .social-icons{
+    display: flex;
+    justify-content: space-between;
+    gap: 6rem;
+}
+
+
+.wrap .social-icons img{
+    width: 2.4rem;
+}
+
+.wrap .social-icons #fb{
+    width: 1.2rem;
+}
+
+/* Media Queries */
+/* For 1100px */
+@media screen and (max-width: 1100px){
+    
+    .navbar nav{
+        display: none;
+    }
+
+    .bar{
+        display: block;
+        font-size: 3rem;
+        place-self: center;
+        color: var(--button-bg-color);
+    }
+
+    /* Business Section */
+    .business{
+        background: none;
+    }
+
+    .business .skills .skill{
+        width: 20rem;
+        padding: 4rem 2rem;
+    }
+
+    .business .skills .skill p{
+        font-size: 1.5rem;
+    }
+    
+    .acheivements-section{
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+    }
+
+    .acheivements-section .acheivement{
+        width: 100%;
+        background: none;
+    }
+
+    /* Projects */
+    .projects .heading{
+        width: 90%;
+    }
+    .project-section{
+        width: 90%;
+    }
+
+    /* Collab */
+    .collab{
+        width: 90%;
+        /* text-align: center; */
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .text{
+        width: 90%;
+    }
+
+}
+
+/* For tab */
+@media screen and (max-width: 768px){
+    .navbar{
+        margin: 2rem;
+    }
+
+    .intro{
+        flex-direction: column;
+        gap: 3rem;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin: 0rem;
+    }
+
+    .intro img{
+        width: 60%;   
+    }
+
+    .intro .info{
+        width: 60%;
+        text-align: center;
+        align-items: center;
+    }
+
+    /* Acheivement Section */
+
+    .business .skills{
+        margin: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .business .skills .skill{
+        width: 65%;
+        padding-left: 4rem;
+        padding-right: 8rem; 
+    }
+
+    .skill img{
+        width: 15%;   
+    }
+
+    .skill h2{
+        font-size: 3rem;
+    }
+
+    .skill p{
+        font-size: 2rem;
+    }
+
+    .acheivements-section{
+        width: 100%;
+    }
+    .acheivements-section .acheivement{
+        width: 70%;
+    }
+    .acheivements-section .right-side{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .right-side .acheive{
+        width: 70%;
+    }
+
+    /* Projects */
+    .projects .heading{
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .text{
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .projects .heading button{
+        margin: 0 auto;
+    }
+
+    .project-section {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .project{
+        width: 70%;
+        align-self: center;
+    }
+
+    .projects button{
+        margin-left: 0;
+    }
+
+    .bottom-nav{
+        width: 80%;
+    }
+
+    footer{
+        margin: 0;
+        width: 100%;
+    }
+
+    .wrap{
+        width: 90%;
+        /* padding: 0; */
+        margin: 0 auto;
+    }
+
+    .social-icons{
+        width: 40%;
+        gap: 0;
+        justify-content: space-between;
+    }
+}
+
+/* For Phone */
+@media screen and (max-width: 505px){
+    /* Skills */
+    .business .skills .skill{
+        width: 85%;
+    }
+
+    .right-side .acheive{
+        width: 90%;
+    }
+
+    .projects .heading{
+        width: 100%;
+    }
+
+    .project{
+        width: 85%;
+    }
+
+    .project img{
+        padding: 2rem 1rem;
+    }
+
+    .project:nth-child(4) img{
+        padding: 2rem 1rem;
+    }
+
+    .bottom-nav{
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    .wrap{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .wrap>img{
+            width: 8rem;
+        }
+
+    .wrap .social-icons{
+        width: 80%;
+    }
+
+    .collab{
+        padding: 3rem 1.5rem;
+    }
+
+
+}
+
+@media screen and (max-width: 320px){
+    .navbar .bar{
+        font-size: 2rem;
+    }
+
+    .navbar img{
+        width: 8rem;
+    }
+}
