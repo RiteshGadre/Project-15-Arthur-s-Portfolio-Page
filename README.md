@@ -6,7 +6,7 @@
 
 ![](./images/Arthur%20Portfolio%20Page%20Screenshot%20-%20127.0.0.1.png)
 
-[Live Link](https://ritesh-dance-landing-page.netlify.app/)
+[Live Link](https://ritesh-arthurs-portfolio-page.netlify.app/)
 
 # ![](https://img.shields.io/badge/-Technologies%20Used-blue)
 ```
